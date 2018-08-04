@@ -1,5 +1,5 @@
 //
-//  PaymentController.h
+//  ApplePayPaymentService.h
 //  paymentsApp
 //
 //  Created by Wiljay Flores on 2018-08-03.
@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PaymentGateway.h"
 
-@interface PaymentController : NSObject
-
--(NSInteger) generateRandomValue;
+@interface ApplePayPaymentService : NSObject <PaymentGatewayDelegate>
 
 @end

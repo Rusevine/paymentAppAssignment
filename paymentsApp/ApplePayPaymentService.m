@@ -1,21 +1,21 @@
 //
-//  PaypalPaymentService.m
+//  ApplePayPaymentService.m
 //  paymentsApp
 //
 //  Created by Wiljay Flores on 2018-08-03.
 //  Copyright © 2018 wiljay. All rights reserved.
 //
 
-#import "PaypalPaymentService.h"
+#import "ApplePayPaymentService.h"
 
-@implementation PaypalPaymentService
+@implementation ApplePayPaymentService
 
 -(BOOL)canProcessPayment{
     return arc4random_uniform(2);
 }
 
 -(void)successMessage:(NSInteger)payment{
-    NSLog(@"Paypal processed amount $%ld",(long)payment);
+    NSLog(@"ApplePay processed amount $%ld",(long)payment);
 }
 
 @end

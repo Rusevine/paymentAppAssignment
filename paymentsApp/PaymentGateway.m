@@ -10,4 +10,14 @@
 
 @implementation PaymentGateway
 
+-(void)processPaymentAmount:(NSInteger)payment{
+    BOOL canProcess = [self.delegate canProcessPayment];
+    
+    if(canProcess){
+        [self.delegate successMessage:payment];
+    } else {
+        NSLog(@"Cannot process payment. Sorry!");
+    }
+}
+
 @end
